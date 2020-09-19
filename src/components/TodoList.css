@@ -1,0 +1,10 @@
+.TodoList__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.TodoList__list {
+  min-width: 30%;
+  list-style: none;
+}
