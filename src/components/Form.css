@@ -1,4 +1,4 @@
-header, form {
+form {
   min-height: 20vh;
   display: flex;
   justify-content: center;
@@ -7,6 +7,10 @@ header, form {
 
 form input:focus, button:focus{
     outline: none;
+}
+
+form input {
+    max-width: 250px;
 }
 
 form input, form button {
@@ -25,6 +29,14 @@ form button {
 
 form button:hover {
     color: rgb(53, 54, 59);
+}
+
+form div:last-child {
+    display: flex;
+}
+
+form div:last-child > button {
+    margin: 1rem 1rem 1rem 0;
 }
 
 .form__select {
@@ -65,4 +77,23 @@ select {
     font-family: "Poppins", sans-serif;
     cursor: pointer;
     width: 12rem;
+}
+
+@media screen and (max-width: 600px) {
+    /* .Form__container {
+        margin: 20px;
+    } */
+    form {
+       flex-direction: column;
+       margin: 20px;
+    } 
+    form > div {
+        flex-direction: row;
+    } 
+    form > div > input {
+        width: 180px;
+    } 
+    form > div:last-child {
+        width: 255px;
+    } 
 }

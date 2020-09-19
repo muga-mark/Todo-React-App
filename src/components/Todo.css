@@ -39,4 +39,11 @@
   opacity: 0.5;
 }
 
+@media screen and (max-width: 600px) {
+  .Todo li {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+}
 

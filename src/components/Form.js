@@ -24,29 +24,46 @@ function Form({ todos, setTodos, inputText, setInputText, setStatus }) {
         setStatus(e.target.value);
     }
 
-    return (
-        <form>
-            <input 
-                value={inputText}
-                onChange={inputTextHandler} 
-                type="text" 
-            />
+    const clearList = (e) => {
+        e.preventDefault();
+        setTodos([]);
+    }
 
-            <button onClick={submitTodoHander} type="submit">
-                <i className="fas fa-plus-square"></i>
-            </button>
-            
-            <div className="form__select">
-                <select 
-                    name="todos" 
-                    className="form__select_filter"
-                    onChange={statusHander}>
-                    <option value="all">All</option>
-                    <option value="completed">Completed</option>
-                    <option value="uncompleted">Uncompleted</option>
-                </select>
-            </div>
-        </form>
+    return (
+        // <div className="Form__container">
+            <form>
+                <div>
+                    <input 
+                        value={inputText}
+                        onChange={inputTextHandler} 
+                        type="text" 
+                    />
+                    <button onClick={submitTodoHander} type="submit">
+                        <i className="fas fa-plus-square"></i>
+                    </button>
+                </div>
+
+               <div>
+                    <div className="form__select">
+                        <div>
+                            <select 
+                                name="todos" 
+                                className="form__select_filter"
+                                onChange={statusHander}>
+                                <option value="all">All</option>
+                                <option value="completed">Completed</option>
+                                <option value="uncompleted">Uncompleted</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <button onClick={clearList} className="Todo__trash_btn">
+                            <i className="fas fa-trash"></i>
+                        </button>  
+                    </div>
+                </div>
+            </form>
+        // </div>
     )
 }
 
