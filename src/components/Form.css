@@ -80,9 +80,6 @@ select {
 }
 
 @media screen and (max-width: 600px) {
-    /* .Form__container {
-        margin: 20px;
-    } */
     form {
        flex-direction: column;
        margin: 20px;

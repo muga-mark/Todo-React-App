@@ -2,9 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 500ms;
 }
   
 .TodoList__list {
   min-width: 30%;
   list-style: none;
+  transition: 500ms;
 }
